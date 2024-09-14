@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortner</title>
+    <script src="{% static 'htmx.js' %}"></script>
+</head>
+<body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
+    <h1>Shorten your url.</h1>
+    <form hx-post="{% url 'index' %}" hx-trigger="submit" hx-swap="outerHTML">
+        {{form.as_p}}
+        <button type="submit">Shorten URL</button>
+    </form>
+</body>
+</html>

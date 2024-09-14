@@ -1,0 +1,6 @@
+<form hx-post="{% url 'index' %}" hx-trigger="submit" hx-swap="outerHTML">
+    <p>Your form submitted successfully.</p>
+    <p>Your shourt url is <a href="">https://www.a.com/{{url}}</a></p>
+    {{form.as_p}}
+    <button type="submit">Shorten URL</button>
+</form>

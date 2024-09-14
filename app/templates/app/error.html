@@ -1,0 +1,5 @@
+<form hx-post="{% url 'index' %}" hx-trigger="submit" hx-swap="outerHTML"></form>
+    <p>Kindly submit the form again</p>
+    {{form.as_p}}
+    <button type="submit">Shorten URL</button>
+</form>
